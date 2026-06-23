@@ -1,0 +1,205 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background-color: #ffffff;
+    color: #222;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+
+header nav {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2.5rem;
+}
+
+.nav-logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #6a5af9;
+    text-decoration: none;
+    margin-right: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+}
+
+.nav-active {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #222;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* ================================
+   PROJECTEN SECTIE
+   ================================ */
+.projecten {
+    padding: 3.5rem 2.5rem;
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.projecten-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.projecten-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 0.6rem;
+}
+
+.projecten-header p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ================================
+   GRID
+   ================================ */
+.projecten-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* ================================
+   CARDS
+   ================================ */
+.project-card {
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-foto {
+    background-color: #f3f3f3;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-foto-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    flex: 1;
+}
+
+.card-body h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.card-body p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ================================
+   TAGS
+   ================================ */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid #ddd;
+    color: #444;
+    background: #fafafa;
+}
+
+/* ================================
+   CODE KNOP
+   ================================ */
+.code-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding: 0.65rem 1rem;
+    border: 1px solid #222;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.code-btn:hover {
+    background: #222;
+    color: #fff;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+@media (max-width: 650px) {
+    header nav {
+        padding: 1rem 1.5rem;
+    }
+
+    .projecten-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projecten-header h1 {
+        font-size: 1.7rem;
+    }
+}

@@ -1,0 +1,175 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background-color: #ffffff;
+    color: #222;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* ================================
+   NAV - identiek aan andere paginas
+   ================================ */
+header nav {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2.5rem;
+}
+
+.nav-logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #6a5af9;
+    text-decoration: none;
+    margin-right: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+}
+
+.nav-active {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #222;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* ================================
+   VAARDIGHEDEN SECTIE
+   ================================ */
+.vaardigheden {
+    padding: 3.5rem 2.5rem;
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.vaardigheden-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.vaardigheden-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 0.6rem;
+}
+
+.vaardigheden-header p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* ================================
+   GRID - 2 kolommen
+   ================================ */
+.vaardigheden-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+/* ================================
+   CARDS
+   ================================ */
+.vaard-card {
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #fff;
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-top h2 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111;
+}
+
+/* ICOON */
+.card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.icon-code    { background: linear-gradient(135deg, #6a5af9, #8a4fff); }
+.icon-design  { background: linear-gradient(135deg, #6a5af9, #8a4fff); }
+.icon-tools   { background: linear-gradient(135deg, #6a5af9, #8a4fff); }
+.icon-backend { background: linear-gradient(135deg, #6a5af9, #8a4fff); }
+
+/* ================================
+   TAGS
+   ================================ */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid #ddd;
+    color: #444;
+    background: #fafafa;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+@media (max-width: 650px) {
+    header nav {
+        padding: 1rem 1.5rem;
+    }
+
+    .vaardigheden-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vaardigheden-header h1 {
+        font-size: 1.7rem;
+    }
+}

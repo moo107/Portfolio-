@@ -1,0 +1,273 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background-color: #ffffff;
+    color: #222;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* ================================
+   NAV - identiek aan andere paginas
+   ================================ */
+header nav {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2.5rem;
+}
+
+.nav-logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #6a5af9;
+    text-decoration: none;
+    margin-right: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+}
+
+.nav-active {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #222;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* ================================
+   CONTACT SECTIE
+   ================================ */
+.contact {
+    padding: 3.5rem 2.5rem;
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 0.6rem;
+}
+
+.contact-header p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+/* ================================
+   GRID - 2 kolommen
+   ================================ */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+/* ================================
+   LINKS KOLOM
+   ================================ */
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-links h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.info-card {
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.info-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.icon-email   { background: linear-gradient(135deg, #6a5af9, #8a4fff); }
+.icon-locatie { background: linear-gradient(135deg, #b78af9, #8a4fff); }
+
+.info-label {
+    display: block;
+    font-size: 0.78rem;
+    color: #999;
+    margin-bottom: 0.2rem;
+}
+
+.info-value {
+    display: block;
+    font-size: 0.9rem;
+    color: #222;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.info-value:hover {
+    color: #6a5af9;
+}
+
+/* ================================
+   SOCIAAL
+   ================================ */
+.socials {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.social-btn {
+    width: 44px;
+    height: 44px;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #444;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.social-btn:hover {
+    border-color: #6a5af9;
+    color: #6a5af9;
+}
+
+/* ================================
+   FORMULIER CARD
+   ================================ */
+.contact-form-card {
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.7rem 0.9rem;
+    border: none;
+    border-radius: 8px;
+    background: #f4f4f5;
+    font-size: 0.9rem;
+    color: #222;
+    font-family: inherit;
+    resize: none;
+    outline: none;
+    transition: background 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    background: #ebebed;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.85rem;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: inherit;
+}
+
+.submit-btn:hover {
+    background: #111;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+@media (max-width: 650px) {
+    header nav {
+        padding: 1rem 1.5rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-header h1 {
+        font-size: 1.7rem;
+    }
+}
